@@ -21,27 +21,32 @@
           </div>
 
           <!-- Choose Person Type -->
-          <div class="radio">
+          <div id="radioSetPerson" class="radio">
             <label>
-              <input type="radio" name="optionsPerson" id="radioPerson" value ="a person" checked>
+              <input type="radio" name="optionsPerson" class="optionsPerson" id="radioPerson" value ="a person|their" checked>
               A Person &nbsp; &nbsp; &nbsp; &nbsp;
             </label>
             <label>
-              <input type="radio" name="optionsPerson" id="radioMan" value ="a man">
+              <input type="radio" name="optionsPerson" class="optionsPerson" id="radioMan" value ="a man|his">
               A Man &nbsp; &nbsp; &nbsp; &nbsp;
             </label>
             <label>
-              <input type="radio" name="optionsPerson" id="radioWoman" value ="a woman">
+              <input type="radio"  name="optionsPerson" class="optionsPerson" id="radioWoman" value ="a woman|her">
               A Woman
             </label>
           </div>
 
           <!-- Story Select -->
-          <select class="form-control">
-            <option>Ditty</option>
-            <option>Story</option>
-            <option>Shaggy Dog\s Tale</option>
-          </select>
+          <div class="form-group">
+            <label for="communicationType">
+              Choose form of communication:
+            </label>
+            <select class="form-control" id="communicationType">
+              <option>Ditty</option>
+              <option>Story</option>
+              <option>Shaggy Dog\'s Tale</option>
+            </select>
+          </div>
 
           <!-- Choose one or more ways to listen -->
           <label class="checkbox-inline">
@@ -56,35 +61,40 @@
             <input type="checkbox" id="checkboxAttend" value="attend">Attend (pick at least one)
           </label>
 
-          <!-- Choose What got Fed -->
+          <!-- Choose who got Fed -->
           <div class="radio">
             <label>
-              <input type="radio" name="optionsFed" id="radioDoggies" value ="doggies" checked>
+              <input type="radio" name="optionsWhoFed" id="radioDoggies" value ="doggies" checked>
               Doggies &nbsp; &nbsp; &nbsp; &nbsp;
             </label>
             <label>
-              <input type="radio" name="optionsFed" id="radioBaby" value ="baby">
+              <input type="radio" name="optionsWhoFed" id="radioBaby" value ="baby">
               Baby &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             </label>
             <label>
-              <input type="radio" name="optionsFed" id="radioFamily" value ="family">
+              <input type="radio" name="optionsWhoFed" id="radioFamily" value ="family">
               Family
             </label>
           </div>
 
+          <button type="submit" class="btn">
+            Submit!
+          </button>
+
         </form>
 
-        <p id="themeSong">
+        <p id="themeSong" class="hidden">
           Come and
-          <u><span id="insertListen">listen</span></u>
+          <u><span id="insertAttendingType">listen</span></u>
           to my
-          <u><span id="insertStory">story</span></u>
+          <u><span id="insertCommunicationType">story</span></u>
           about
-          <u><span id="insertMan">a man</span></u>
+          <u><span id="insertPersonType">a man</span></u>
           named
           <u><span id="insertName">Jed</span>.</u>
-          A poor mountaineer barely kept his
-          <u><span id="insertFamily">family</span></u>
+          A poor mountaineer barely kept
+          <u><span id="insertPersonTypePossessive">his</span></u>
+          <u><span id="insertWhoFed">family</span></u>
           fed.
         </p>
 
