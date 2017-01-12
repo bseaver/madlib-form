@@ -10,7 +10,83 @@
 
   <body>
     <div class="container">
-      <h2>Try this Mad Lib Form!</h2>
+      <h2>Try this Mad Lib!</h2>
+      <p>Start a 1960's TV theme song by entering a name, choosing options and clicking Submit</p>
+
+        <form id="madForm">
+          <!-- Get Name -->
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Edward">
+          </div>
+
+          <!-- Choose Person Type -->
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsPerson" id="radioPerson" value ="a person" checked>
+              A Person &nbsp; &nbsp; &nbsp; &nbsp;
+            </label>
+            <label>
+              <input type="radio" name="optionsPerson" id="radioMan" value ="a man">
+              A Man &nbsp; &nbsp; &nbsp; &nbsp;
+            </label>
+            <label>
+              <input type="radio" name="optionsPerson" id="radioWoman" value ="a woman">
+              A Woman
+            </label>
+          </div>
+
+          <!-- Story Select -->
+          <select class="form-control">
+            <option>Ditty</option>
+            <option>Story</option>
+            <option>Shaggy Dog\s Tale</option>
+          </select>
+
+          <!-- Choose one or more ways to listen -->
+          <label class="checkbox-inline">
+            <input type="checkbox" id="checkboxHarken" value="harken" checked>
+            Harken &nbsp; &nbsp; &nbsp; &nbsp;
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="checkboxListen" value="listen">
+            Listen &nbsp; &nbsp; &nbsp; &nbsp;
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="checkboxAttend" value="attend">Attend (pick at least one)
+          </label>
+
+          <!-- Choose What got Fed -->
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsFed" id="radioDoggies" value ="doggies" checked>
+              Doggies &nbsp; &nbsp; &nbsp; &nbsp;
+            </label>
+            <label>
+              <input type="radio" name="optionsFed" id="radioBaby" value ="baby">
+              Baby &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </label>
+            <label>
+              <input type="radio" name="optionsFed" id="radioFamily" value ="family">
+              Family
+            </label>
+          </div>
+
+        </form>
+
+        <p id="themeSong">
+          Come and
+          <u><span id="insertListen">listen</span></u>
+          to my
+          <u><span id="insertStory">story</span></u>
+          about
+          <u><span id="insertMan">a man</span></u>
+          named
+          <u><span id="insertName">Jed</span>.</u>
+          A poor mountaineer barely kept his
+          <u><span id="insertFamily">family</span></u>
+          fed.
+        </p>
 
     </div>
   </body>
